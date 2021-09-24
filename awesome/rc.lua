@@ -9,8 +9,6 @@ require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
 local lain = require("lain")
---local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 -- Theme handling library
@@ -418,11 +416,11 @@ globalkeys = gears.table.join(
     awful.key({ }, "F12", function () awful.util.spawn("xscreensaver-command -lock") end),
 
     -- Copy primary to clipboard (terminals to gtk)
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
+    awful.key({ "Control" }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
               {description = "copy terminal to gtk", group = "hotkeys"}),
 
     -- Copy clipboard to primary (gtk to terminals)
-    awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
+    awful.key({ "Control" }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
               {description = "copy gtk to terminal", group = "hotkeys"}),
     
     --screenshots

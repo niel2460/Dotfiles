@@ -2,6 +2,7 @@
      {"Code - OSS", "/usr/bin/code-oss --unity-launch ", "/usr/share/pixmaps/com.visualstudio.code.oss.png" },
      {"Galculator", "galculator", "/usr/share/icons/hicolor/48x48/apps/galculator.png" },
      {"KeePass Password Safe", "keepass", "/usr/share/icons/hicolor/16x16/apps/keepass.png" },
+     {"Leafpad", "leafpad ", "/usr/share/icons/hicolor/16x16/apps/leafpad.png" },
      {"Vim", "xterm -e vim ", "/usr/share/icons/hicolor/48x48/apps/gvim.png" },
      {"Visor de imágenes", "gpicview ", "/usr/share/icons/hicolor/48x48/apps/gpicview.png" },
      {"Xarchiver", "xarchiver ", "/usr/share/icons/hicolor/16x16/apps/xarchiver.png" },
