@@ -48,8 +48,9 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
---local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "multicolor")
+--beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "zenburn")
+beautiful.init(theme_path)
 --beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
@@ -122,7 +123,7 @@ local mycpu = lain.widget.cpu{
 --RAM widget
 local mymem = lain.widget.mem{
 	settings = function()
-		widget:set_markup(" MEM " .. mem_now.perc.. "% ")
+		widget:set_markup(" RAM " .. mem_now.perc.. "% ")
 	end
 }
 
@@ -134,7 +135,7 @@ local mytemp = lain.widget.temp{
 }
 --Separator
 separator = wibox.widget.textbox (" | ")
-
+ 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 

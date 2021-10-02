@@ -3,6 +3,7 @@
      {"Galculator", "galculator", "/usr/share/icons/hicolor/48x48/apps/galculator.png" },
      {"KeePass Password Safe", "keepass", "/usr/share/icons/hicolor/16x16/apps/keepass.png" },
      {"Leafpad", "leafpad ", "/usr/share/icons/hicolor/16x16/apps/leafpad.png" },
+     {"Shutter", "shutter ", "/usr/share/icons/hicolor/16x16/apps/shutter.png" },
      {"Vim", "xterm -e vim ", "/usr/share/icons/hicolor/48x48/apps/gvim.png" },
      {"Visor de imágenes", "gpicview ", "/usr/share/icons/hicolor/48x48/apps/gpicview.png" },
      {"Xarchiver", "xarchiver ", "/usr/share/icons/hicolor/16x16/apps/xarchiver.png" },
@@ -19,17 +20,19 @@
  local menu010ccd73d8965edb946094904b05ace3 = {
      {"Alacritty", "alacritty", "/usr/share/pixmaps/Alacritty.svg" },
      {"BleachBit", "bleachbit", "/usr/share/pixmaps/bleachbit.png" },
-     {"Cajas", "gnome-boxes "},
      {"Configuración del sistema", "io.elementary.switchboard "},
      {"GParted", "/usr/bin/gparted ", "/usr/share/icons/hicolor/16x16/apps/gparted.png" },
      {"Gestor de archivos PCManFM", "pcmanfm "},
      {"Hardware Locality lstopo", "lstopo"},
      {"Htop", "xterm -e htop", "/usr/share/pixmaps/htop.png" },
+     {"Informacion y Rendimiento del Sistema", "/usr/bin/hardinfo", "/usr/share/icons/hicolor/48x48/apps/hardinfo.png" },
      {"LSHW", "/usr/sbin/gtk-lshw", "///usr/share/lshw/artwork/logo.svg" },
+     {"MEGAsync", "megasync", "/usr/share/icons/hicolor/16x16/apps/mega.png" },
      {"MultiWriter", "gnome-multi-writer", "/usr/share/icons/hicolor/16x16/apps/org.gnome.MultiWriter.png" },
      {"Navegador Zeroconf de Avahi", "/usr/bin/avahi-discover"},
      {"Octopi", "/usr/bin/octopi", "/usr/share/icons/octopi.png" },
      {"Octopi CacheCleaner", "/usr/bin/octopi-cachecleaner", "/usr/share/icons/octopi.png" },
+     {"Oracle VM VirtualBox", "VirtualBox ", "/usr/share/icons/hicolor/16x16/mimetypes/virtualbox.png" },
      {"ranger", "xterm -e ranger"},
  }
 
@@ -37,7 +40,9 @@
      {"AnyDesk", "/usr/bin/anydesk ", "/usr/share/pixmaps/anydesk.svg" },
      {"Examinador de servidores SSH de Avahi", "/usr/bin/bssh"},
      {"Examinador de servidores VNC de Avahi", "/usr/bin/bvnc"},
+     {"MEGAsync", "megasync", "/usr/share/icons/hicolor/16x16/apps/mega.png" },
      {"Opera", "opera ", "/usr/share/icons/hicolor/16x16/apps/opera.png" },
+     {"Remmina", "remmina-file-wrapper ", "/usr/share/icons/hicolor/16x16/apps/org.remmina.Remmina.png" },
      {"Zoom", "/usr/bin/zoom ", "/usr/share/pixmaps/Zoom.png" },
  }
 
@@ -50,10 +55,10 @@
  }
 
  local menua417aafc9b2f25e6d396aadf7c37ab21 = {
-     {"Cajas", "gnome-boxes "},
      {"Code - OSS", "/usr/bin/code-oss --unity-launch ", "/usr/share/pixmaps/com.visualstudio.code.oss.png" },
      {"DBeaver Community", "dbeaver", "/usr/share/icons/hicolor/16x16/apps/dbeaver.png" },
      {"Electron 12", "electron12 ", "/usr/share/pixmaps/electron12.png" },
+     {"Electron 13", "electron13 ", "/usr/share/pixmaps/electron13.png" },
      {"Qt Assistant", "assistant", "/usr/share/icons/hicolor/32x32/apps/assistant.png" },
      {"Qt Designer", "designer ", "/usr/share/icons/hicolor/128x128/apps/QtProject-designer.png" },
      {"Qt Linguist", "linguist ", "/usr/share/icons/hicolor/16x16/apps/linguist.png" },
