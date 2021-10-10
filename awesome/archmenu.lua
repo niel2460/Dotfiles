@@ -1,4 +1,5 @@
  local menuf9c59cf15f7e3fd54a418134ad8a8be6 = {
+     {"ClipIt", "clipit"},
      {"Code - OSS", "/usr/bin/code-oss --unity-launch ", "/usr/share/pixmaps/com.visualstudio.code.oss.png" },
      {"Galculator", "galculator", "/usr/share/icons/hicolor/48x48/apps/galculator.png" },
      {"KeePass Password Safe", "keepass", "/usr/share/icons/hicolor/16x16/apps/keepass.png" },
@@ -26,7 +27,6 @@
      {"Hardware Locality lstopo", "lstopo"},
      {"Htop", "xterm -e htop", "/usr/share/pixmaps/htop.png" },
      {"Informacion y Rendimiento del Sistema", "/usr/bin/hardinfo", "/usr/share/icons/hicolor/48x48/apps/hardinfo.png" },
-     {"LSHW", "/usr/sbin/gtk-lshw", "///usr/share/lshw/artwork/logo.svg" },
      {"MEGAsync", "megasync", "/usr/share/icons/hicolor/16x16/apps/mega.png" },
      {"MultiWriter", "gnome-multi-writer", "/usr/share/icons/hicolor/16x16/apps/org.gnome.MultiWriter.png" },
      {"Navegador Zeroconf de Avahi", "/usr/bin/avahi-discover"},
@@ -41,8 +41,8 @@
      {"Examinador de servidores SSH de Avahi", "/usr/bin/bssh"},
      {"Examinador de servidores VNC de Avahi", "/usr/bin/bvnc"},
      {"MEGAsync", "megasync", "/usr/share/icons/hicolor/16x16/apps/mega.png" },
+     {"Mailspring", "mailspring ", "/usr/share/icons/hicolor/16x16/apps/mailspring.png" },
      {"Opera", "opera ", "/usr/share/icons/hicolor/16x16/apps/opera.png" },
-     {"Remmina", "remmina-file-wrapper ", "/usr/share/icons/hicolor/16x16/apps/org.remmina.Remmina.png" },
      {"Zoom", "/usr/bin/zoom ", "/usr/share/pixmaps/Zoom.png" },
  }
 

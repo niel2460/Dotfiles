@@ -9,8 +9,9 @@ function run {
 
 #screens resolution
 run xrandr --output HDMI1 --mode 1440x900 --rate 59.90 --output eDP1 --mode 1366x768 --rate 60.00 --left-of HDMI1 
+
 #transparency
-#run picom
+run picom
 
 #update aplication menu
 run xdg_menu --format awesome --root-menu /etc/xdg/menus/arch-applications.menu > ~/.config/awesome/archmenu.lua
@@ -30,3 +31,7 @@ run nm-applet
 
 #key num on
 run numlockx on
+
+#screensaver
+run xscreensaver -no-splash
+

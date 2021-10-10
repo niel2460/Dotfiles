@@ -116,23 +116,37 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 --CPU widget
 local mycpu = lain.widget.cpu{
 	settings = function()
-		widget:set_markup(" CPU " .. cpu_now.usage.. "% ")
+		widget:set_markup("   " .. cpu_now.usage.. "% ")
 	end
 }
 
 --RAM widget
 local mymem = lain.widget.mem{
 	settings = function()
-		widget:set_markup(" RAM " .. mem_now.perc.. "% ")
+		 widget:set_markup("   " .. mem_now.used.. " MB ")
 	end
 }
 
 --TEMP widget
 local mytemp = lain.widget.temp{
 	settings = function()
-		widget:set_markup(" TEMP " .. coretemp_now.. "C ")
+        	widget:set_markup("   " .. coretemp_now .. "°C ")
 	end
 }
+
+-- Battery
+local batt = lain.widget.bat({
+    settings = function()
+        local perc = bat_now.perc ~= "N/A" and bat_now.perc .. "%" or bat_now.perc
+
+        if bat_now.ac_status == 1 then
+            perc = perc .. " plug"
+        end
+
+        widget:set_markup("   " ..  perc .. " ")
+    end
+})
+
 --Separator
 separator = wibox.widget.textbox (" | ")
  
@@ -210,7 +224,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "WWW", "DEV", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX", "SYS" }, s, awful.layout.layouts[1])
+    awful.tag({ "_WWW", "_DEV", "_DOC", "_VBOX", "_CHAT", "_MUS", "_VID", "_GFX", "_SYS" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -252,20 +266,22 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             separator,
-	    mykeyboardlayout,
-	    separator,	    
-	    mycpu.widget,
-	    separator,
-	    mymem,
-	    separator,
-	    mytemp,
-	    separator,
+            mykeyboardlayout,
+            separator,	    
+            mycpu.widget,
+            separator,
+            mymem,
+            separator,
+            mytemp,
+            separator,
+            batt,
+            separator,
             wibox.widget.systray(),
-	    separator,
+	          separator,
             mytextclock,
-	    separator,
-	    logout_menu_widget(),
-	    separator,
+	          separator,
+	          logout_menu_widget(),
+	          separator,
             s.mylayoutbox,
         },
     }
@@ -667,9 +683,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 --Gaps
 beautiful.useless_gap = 5
-
---screensaver
-awful.util.spawn_with_shell("xscreensaver -no-splash")
 
 --Autostart
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
