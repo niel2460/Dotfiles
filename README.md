@@ -4,4 +4,4 @@ Awesome,
 Alacritty,
 mpd,
 ncmpcpp,
-Wim
+Vim
