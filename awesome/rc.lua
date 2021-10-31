@@ -224,7 +224,9 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "_WWW", "_DEV", "_DOC", "_VBOX", "_CHAT", "_MUS", "_VID", "_GFX", "_SYS" }, s, awful.layout.layouts[1])
+    --awful.tag({ "_WWW", "_DEV", "_DOC", "_VBOX", "_CHAT", "_MUS", "_VID", "_GFX", "_SYS" }, s, awful.layout.layouts[1])
+    --awful.tag({ "", "", "", "", "", "", "", "", "" }, s, awful.layout.layouts[1])
+    awful.tag({ "WWW", "DEV", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX", "SYS" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -387,11 +389,11 @@ globalkeys = gears.table.join(
     --          {description = "dmenu show", group = "launcher"}),
 
     --Rofi
-    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show run") end,
+    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show drun show-icons") end,
               {description = "rofi show", group = "launcher"}),
     
     --Rofi switcher
-    awful.key({ modkey },            "Tab",     function () awful.spawn("rofi -show window") end,
+    awful.key({ modkey },            "Tab",     function () awful.spawn("rofi -show window show-icons") end,
               {description = "rofi switcher apps", group = "launcher"}),
   
     awful.key({ modkey }, "x",

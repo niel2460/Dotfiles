@@ -15,7 +15,7 @@ set nobackup
 set incsearch
 set ignorecase
 set clipboard=unnamedplus
-set encoding=utf-8
+set encoding=UTF-8
 set termguicolors
 set cursorline
 set ruler
@@ -23,7 +23,7 @@ set showcmd
 set showmatch
 set relativenumber
 set laststatus=2
-"set noshowmode"
+set noshowmode
 
 set colorcolumn=120
 highlight colorcolumn ctermbg=0 guibg=lightgrey
