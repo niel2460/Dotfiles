@@ -23,7 +23,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + shift + c
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -63,7 +63,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+super + {_,shift + }w
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -145,5 +145,5 @@ XF86AudioStop
 	playerctl stop
 
 #Screensaver
-super + f12
+super + f-12
 	xscreensaver-command -lock

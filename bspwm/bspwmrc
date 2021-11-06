@@ -5,8 +5,14 @@ $HOME/.config/bspwm/autorun.sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9
-bspc monitor HDMI1 -d 1 2 3 4 5 6 7 8 9
+if [[ $(xrandr --listmonitors) == 'Monitors: 2
+ 0: +*eDP1 1366/280x768/160+0+0  eDP1
+ 1: +HDMI1 1440/370x900/230+1366+0  HDMI1' ]]; then
+   bspc monitor eDP1 -d 1 2 3 4 5 
+   bspc monitor HDMI1 -d 6 7 8 9 10
+else
+   bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9
+fi
 
 bspc config border_width         2
 bspc config window_gap          10
@@ -29,7 +35,8 @@ xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP1)
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI1)
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a opera desktop='^1'
+bspc rule -a Opera desktop='^1'
+bspc rule -a Strawberry desktop='^5'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off

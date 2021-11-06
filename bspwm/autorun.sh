@@ -24,7 +24,7 @@ run volumeicon
 run nm-applet 
 
 #xfce4-power manager
-#run xfce4-power-manager
+run xfce4-power-manager
 
 #key num on
 run numlockx on
