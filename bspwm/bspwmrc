@@ -1,7 +1,7 @@
 #! /bin/sh
 sxhkd &
-$HOME/.config/bspwm/autorun.sh
 $HOME/.config/polybar/launch.sh
+$HOME/.config/bspwm/autorun.sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -14,13 +14,20 @@ else
    bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9
 fi
 
-bspc config border_width         3 
-bspc config window_gap           10
+bspc config border_width          2 
+bspc config window_gap            10
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio           0.5
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true 
 bspc config focus_follows_pointer true
+bspc config focus_by_distance     true
+
+#pointer
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
 
 ### BSPWM coloring ####
 bspc config normal_border_color		      "#4c566a"
@@ -35,12 +42,12 @@ xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP1)
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI1)
 
 bspc rule -a Opera desktop='^1'
-bspc rule -a pcmanfm desktop='^3'
+bspc rule -a PCManFM desktop='^3'
 bspc rule -a zoom desktop='^4'
 bspc rule -a strawberry desktop='^5'
 bspc rule -a vlc desktop='^6'
 bspc rule -a gimp desktop='^7' state=floating follow=on
-bspc rule -a inkscape desktop='^7'
+bspc rule -a Inkscape desktop='^7'
 bspc rule -a mplayer2 state=floating
 bspc rule -a shutter state=floating
 bspc rule -a Kupfer.py focus=on

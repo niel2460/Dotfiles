@@ -24,8 +24,7 @@ set showmatch
 set relativenumber
 set laststatus=2
 set noshowmode
+set guifont=DroidSansMono_Nerd_Font:h11
 
 set colorcolumn=120
 highlight colorcolumn ctermbg=0 guibg=lightgrey
-
-

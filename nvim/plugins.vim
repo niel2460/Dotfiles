@@ -3,10 +3,13 @@ call plug#begin('~/.vim/plugged')
 	"Temas"
 	Plug 'morhetz/gruvbox'
 	Plug 'ayu-theme/ayu-vim'
+	Plug 'glepnir/oceanic-material'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 
 	"Visual"
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'sheerun/vim-polyglot'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	
 	
 	"status bar
 	Plug 'maximbaz/lightline-ale'
@@ -23,7 +26,7 @@ call plug#begin('~/.vim/plugged')
 
 	"tmux
 	"Plug 'benmills/vimux'
-  "Plug 'christoomey/vim-tmux-navigator'
+  	"Plug 'christoomey/vim-tmux-navigator'
 
 	"autocomplete
 	Plug 'sirver/ultisnips'
@@ -36,5 +39,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'yggdroot/indentline'
 	Plug 'mhinz/vim-signify'
 	Plug 'scrooloose/nerdcommenter'
+  Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}	
 
 call plug#end()

@@ -2,7 +2,7 @@ let mapleader=" "
 
 "search and tree
 nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>nt :NERDTree<CR>
 let NERDTreeQuitOnOpen=1
 
 "save and exit
@@ -22,7 +22,7 @@ nnoremap <Leader>< 10<C-w><
 
 "tabs navigator
 map <Leader>h :tabprevious<cr>
-map <Leader>l tabnext<cr>
+map <Leader>l :tabnext<cr>
 
 "buffers
 map <Leader>ob :Buffers<cr>

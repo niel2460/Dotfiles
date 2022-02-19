@@ -18,6 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
+background1 =     #00000000
 background =      #2E3440
 background-alt =  #ECEFF4
 ;foreground = ${xrdb:color7:#222}
@@ -58,10 +59,13 @@ font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brand:pixelsize=12;2
+font-6 = FontAwesome:styel=regular:pixelsize=10,1
 
 modules-left = bspwm i3
-modules-center = mpd 
+modules-center = xwindow
 modules-right = xkeyboard pacman-updates cpu memory battery temperature date powermenu
+
+separator = |
 
 tray-position = right
 tray-padding = 2
@@ -97,10 +101,13 @@ font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brand:pixelsize=12;2
+font-6 = FontAwesome:styel=regular:pixelsize=10,1
 
 modules-left = bspwm i3
-modules-center = mpd 
+modules-center = xwindow 
 modules-right = xkeyboard cpu memory battery temperature date powermenu
+
+separator = |
 
 tray-position = right
 tray-padding = 2
@@ -131,7 +138,7 @@ interval = 1000
 label = Repo: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = #FFBB00
 format-underline = #FFBB00
 
@@ -311,11 +318,11 @@ label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
-interval = 2
-format-prefix = " "
+interval = 2 
+format-prefix = " "
 format-prefix-foreground = #4bffdc 
 format-underline = #4bffdc
-label = %mb_used%%
+label = %mb_used%
 
 [module/wlan]
 type = internal/network
